@@ -13,7 +13,7 @@ let hero = {
 
 // rest function can be called with object as an argument
 function rest(hero) {
-    
+
     // And (re)assigns the health property of that object the value 10
     hero.health = 10;
 
@@ -33,16 +33,38 @@ let weapon = {
     damage: 2
 }
 
+console.log(hero);
+
+
 function pickUpItem(hero, weapon) {
-    
+
     // Adds the weapon-like object as the last element of the inventory array of the hero-like object
-    
+
+    let heroInventory = hero.inventory;
+
+    // hero.inventory = [weapon].push;
+
+
+
+    heroInventory.push(weapon);
+
+    // var fruits = ["Banana", "Orange", "Apple", "Mango"]; document.getElementById("demo").innerHTML = fruits;
+
+    // function myFunction() {
+    //     fruits.push("Kiwi");
+    //     document.getElementById("demo").innerHTML = fruits;
+    // }
+
+
+
     // When the dagger is clicked it will add a weapon-like object to the inventory array with `type`: `dagger` and `damage`: 2
-    hero.inventory = [weapon];
 
     console.log(hero);
-    
+    console.log(heroInventory);
 }
+
+
+
 
 function equipWeapon(params) {
 
