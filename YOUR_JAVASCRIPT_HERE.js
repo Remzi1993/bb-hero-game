@@ -20,7 +20,6 @@ function rest(hero) {
     // Creates an alert popup with a message, If the health property of that object already has the value 10
     if (hero.health === 10) {
         alert("Your health is already level 10");
-        return hero;
     }
 
     return hero;
