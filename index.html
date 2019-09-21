@@ -1,13 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Mocha Tests</title>
-    <link href="lib/mocha.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My hero game</title>
+  <link rel="stylesheet" href="lib/mocha.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-
   <!-- 👍 YOUR HTML HERE 👍 -->
+  <img src="inn.jpg" alt="Inn" id="inn">
 
 
 
@@ -15,15 +20,18 @@
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
 
   <div id="mocha">
-  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+    <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
   </div>
 
   <script src="lib/chai.js"></script>
   <script src="lib/mocha.js"></script>
   <script src="lib/sinon.js"></script>
-  <script>mocha.setup('bdd')</script>
+  <script>
+    mocha.setup('bdd')
+  </script>
   <script src="YOUR_JAVASCRIPT_HERE.js"></script>
   <script src="lib/game_logic.test.js"></script>
 
 </body>
+
 </html>

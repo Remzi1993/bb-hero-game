@@ -9,9 +9,9 @@ let hero = {
         type: 'Sword',
         damage: 2
     },
-    resting: function() {
-        return rest;
-    }
+    // rest: function () {
+    //     return hero.health = 10;
+    // }
 };
 
 
@@ -19,8 +19,8 @@ let hero = {
 
 
 // And (re)assigns the health property of that object the value 10
-function rest(params) {
-
+function rest(hero) {
+    
 }
 
 console.log(rest());
