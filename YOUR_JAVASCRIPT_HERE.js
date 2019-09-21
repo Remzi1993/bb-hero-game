@@ -58,3 +58,38 @@ function equipWeapon(hero) {
     console.log(hero);
 
 }
+
+
+
+// You play as a hero and you have some "stats" like health and inventory
+
+
+// Stats of the hero
+// Name
+statName = document.createElement('h3')
+statName.innerHTML = 'Name: ' + hero.name;
+document.getElementById('displayStats').appendChild(statName);
+
+// Inventory
+statInventory = document.createElement('h3')
+statInventory.innerHTML = 'Inventory: ' + hero.inventory;
+document.getElementById('displayStats').appendChild(statInventory);
+
+// Health
+statHealth = document.createElement('h3')
+statHealth.innerHTML = 'Health: ' + hero.health;
+document.getElementById('displayStats').appendChild(statHealth);
+
+// Current weapon
+statWeapon = document.createElement('h3')
+
+statWeapon.innerHTML = `
+    Current weapon: ${hero.weapon.type}<br>
+    Damage: ${hero.weapon.damage}
+`;
+
+
+// logString = `Description: ${ description }. Properties: ${ JSON.stringify( properties ) }.`
+
+document.getElementById('displayStats').appendChild(statWeapon);
+console.log(displayStats);

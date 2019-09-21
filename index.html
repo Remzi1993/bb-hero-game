@@ -4,29 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My hero game</title>
+  <title>Remzi's hero game</title>
   <link rel="stylesheet" href="lib/mocha.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- 👍 YOUR HTML HERE 👍 -->
-  <a href="#" onclick="rest(hero)" title="This is the inn where you can sleep en regain your health">
-    <img src="img/inn.jpg" alt="Inn" id="inn">
-  </a>
 
-  <a href="#" onclick="pickUpItem(hero, weapon)" title="You can pick up this dagger and put it in your inventory">
-    <img src="img/dagger.jpg" alt="Dagger" id="dagger">
-  </a>
+  <h1>Remzi's hero game</h1>
+  <section id="main">
+    <h2>The game</h2>
+    <a href="#" onclick="rest(hero)" title="This is the inn where you can sleep en regain your health">
+      <img src="img/inn.jpg" alt="Inn" id="inn">
+    </a>
 
-  <a href="#" onclick="equipWeapon(hero)">
-    <img src="img/bag.png" alt="Bag" id="bag">
-  </a>
+    <a href="#" onclick="pickUpItem(hero, weapon)" title="You can pick up this dagger and put it in your inventory">
+      <img src="img/dagger.jpg" alt="Dagger" id="dagger">
+    </a>
+
+    <a href="#" onclick="equipWeapon(hero)">
+      <img src="img/bag.png" alt="Bag" id="bag">
+    </a>
+  </section>
+
+  <section id="displayStats">
+    <h2>Stats</h2>
+  </section>
 
 
 
-  
+
+
+
 
 
 
