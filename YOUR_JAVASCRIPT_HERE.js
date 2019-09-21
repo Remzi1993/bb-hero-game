@@ -6,10 +6,12 @@ let hero = {
     inventory: [],
     health: 10,
     weapon: {
-        type: 'Sword',
+        type: 'sword',
         damage: 2
     },
 };
+
+console.log(hero); // Just for debugging
 
 // rest function can be called with object as an argument
 function rest(hero) {
@@ -22,50 +24,37 @@ function rest(hero) {
         alert("Your health is already level 10");
     }
 
+    // console.log(hero); // Just for debugging
     return hero;
 }
 
-
-
-// pickUpItem function can be called with a hero-like object as the first argument and a weapon-like object as the second argument
 let weapon = {
     type: 'dagger',
     damage: 2
 }
 
-console.log(hero);
-
-
+// pickUpItem function can be called with a hero-like object as the first argument and a weapon-like object as the second argument
 function pickUpItem(hero, weapon) {
 
     // Adds the weapon-like object as the last element of the inventory array of the hero-like object
-
-    let heroInventory = hero.inventory;
-
-    // hero.inventory = [weapon].push;
-
-
-
-    heroInventory.push(weapon);
-
-    // var fruits = ["Banana", "Orange", "Apple", "Mango"]; document.getElementById("demo").innerHTML = fruits;
-
-    // function myFunction() {
-    //     fruits.push("Kiwi");
-    //     document.getElementById("demo").innerHTML = fruits;
-    // }
-
-
-
-    // When the dagger is clicked it will add a weapon-like object to the inventory array with `type`: `dagger` and `damage`: 2
-
-    console.log(hero);
-    console.log(heroInventory);
+    // let heroInventory = hero.inventory;
+    hero.inventory.push(weapon);
+    console.log(hero); // Just for debugging
 }
 
+// equipWeapon function can be called with a hero-like object as an argument
+function equipWeapon(hero) {
+    // And reassigns the `weapon` property to the first element of the inventory array
 
+    // alert(JSON.stringify(hero.inventory[0], null, 4)); // debugging objects with alart
+    let currentWeapon = hero.weapon; // Get current weapon
+    hero.inventory.push(currentWeapon); // Put current weapon in the inventory as last item
 
+    let getFirstItemOfinventory = hero.inventory[0]; // Get the first weapon out of the inventory
+    hero.weapon = getFirstItemOfinventory // Assign the weapon as the current / active weapon
 
-function equipWeapon(params) {
+    hero.inventory.shift(weapon); // Removed the assigned weapon from the inventory
+
+    console.log(hero);
 
 }
